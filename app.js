@@ -42,7 +42,7 @@ const disneyJunior = [
 const [pj, jake] = disneyJunior
 
 // 3c
-console.log(disneyJunior);
+console.log(pj, jake);
 
 // 4a
 const avengers = {
@@ -54,7 +54,7 @@ const avengers = {
 const {captainAmerica, theHulk} = avengers;
 
 // 4c
-console.log(avengers);
+console.log(captainAmerica, theHulk);
 
 // 4d
 const moreAvengers = {
@@ -64,10 +64,10 @@ const moreAvengers = {
 };
 
 // 4e
-// const {blackWidow: nat, ...: others}; = moreAvengers
+const {blackWidow: nat, ...others} = moreAvengers;
 
 // 4f
-// console.log(moreAvengers);
+console.log(nat, others);
 
 // BONUS
 
@@ -78,10 +78,14 @@ const bonus = {
   };
 
 // 5a
-// const all = [
-//     ...first,
-//     ...second,
-//     ...third
-// ];
+const all = [
+    ...bonus.first,
+    ...bonus.second,
+    ...bonus.third
+];
+console.log(all);
 
-// console.log(all);
+// 5b
+const [one, two, three] = bonus.first;
+const [four, five, six] = bonus.second;
+const [seven, eight, nine] = bonus.third;
